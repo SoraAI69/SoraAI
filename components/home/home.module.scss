@@ -1,0 +1,107 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+
+	min-height: 100dvh;
+}
+
+.page::after {
+	content: '';
+
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	width: 100%;
+	height: 100%;
+
+	background: url('../../public/images/bg_noise.png') repeat center center;
+	mix-blend-mode: plus-lighter;
+
+	z-index: 3;
+}
+
+.page .videoDiv {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+
+	height: calc(100dvh - 121px);
+	min-height: 700px;
+	max-height: 900px;
+
+	object-fit: cover;
+	object-position: 80% 50%;
+
+	pointer-events: none;
+}
+
+.page .bg {
+	position: absolute;
+
+	left: 0px;
+	top: 0px;
+
+	width: 700px;
+
+	height: calc(100dvh - 121px);
+	min-height: 700px;
+	max-height: 900px;
+
+	background: linear-gradient(
+		270deg,
+		rgba(18, 18, 18, 0) 2.08%,
+		#121212 80.04%
+	);
+
+	z-index: 1;
+}
+
+.page .bg::after {
+	position: absolute;
+	content: '';
+
+	left: 0px;
+	bottom: -10px;
+
+	width: 100vw;
+	height: 50px;
+
+	background: linear-gradient(
+		180deg,
+		rgba($color-background, 0) 0%,
+		$color-background 80.04%
+	);
+
+	z-index: 1;
+}
+
+// RWD
+@media (max-width: 900px) {
+	.page .bg {
+		width: 300px;
+		background: linear-gradient(
+			270deg,
+			rgba(18, 18, 18, 0) 2.08%,
+			rgba(#121212, 0.8) 80.04%
+		);
+	}
+
+	.page .videoDiv {
+		object-position: 60% 50%;
+	}
+}
+
+@media (max-width: 650px) {
+	.page .videoDiv {
+		height: calc(100dvh - 80px);
+	}
+
+	.page .bg {
+		height: calc(100dvh - 80px);
+	}
+}

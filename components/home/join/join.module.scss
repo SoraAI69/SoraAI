@@ -1,0 +1,155 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+	width: 100%;
+
+	padding: 80px 0px;
+
+	z-index: 5;
+}
+
+.section .inside {
+	position: relative;
+
+	width: 90%;
+	max-width: 1192px;
+	margin: 0 auto;
+
+	padding: 80px;
+
+	display: flex;
+	gap: 24px;
+	flex-direction: column;
+
+	border-radius: 24px;
+	background: rgba($color-black, 0.01);
+	backdrop-filter: blur(7.5px);
+	border: 1px solid $color-black-2;
+
+	overflow: hidden;
+}
+
+.inside .sectionBg {
+	position: absolute;
+
+	width: 1913px;
+	height: auto;
+
+	z-index: -1;
+
+	left: 50%;
+	bottom: -530px;
+	translate: -50% 0;
+}
+
+.inside .sectionName {
+	position: relative;
+
+	padding: 6px 16px;
+
+	margin: 0 auto;
+
+	border-radius: 55px;
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px #565656;
+	backdrop-filter: blur(7.5px);
+}
+
+.inside .sectionName p {
+	position: relative;
+
+	color: $color-white;
+	text-align: center;
+	font-feature-settings: 'liga' off, 'calt' off;
+	font-family: $font-main;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 145%;
+	letter-spacing: -0.14px;
+}
+
+.inside .sectionName img {
+	position: relative;
+
+	width: 24px;
+	height: auto;
+}
+
+.inside .sectionName::before {
+	position: absolute;
+	content: '';
+
+	left: -2px;
+	top: -2px;
+
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.2);
+}
+
+.inside .sectionName::after {
+	position: absolute;
+	content: '';
+
+	left: -1px;
+	top: -1px;
+
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.1);
+}
+
+.inside .title {
+	position: relative;
+
+	width: 100%;
+	text-align: center;
+
+	color: $color-white;
+}
+
+.inside .desc {
+	position: relative;
+
+	width: 100%;
+	max-width: 530px;
+	text-align: center;
+	margin: 0 auto;
+
+	color: rgba($color-white, 0.7);
+}
+
+.inside .buttons {
+	position: relative;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+}
+
+// RWD
+@media (max-width: 900px) {
+	.section {
+		padding: 40px 0px;
+	}
+}
+
+@media (max-width: 550px) {
+	.section .inside {
+		padding: 40px 24px;
+	}
+}

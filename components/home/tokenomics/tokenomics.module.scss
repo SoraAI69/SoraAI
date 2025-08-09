@@ -1,0 +1,538 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+	width: 100%;
+
+	padding: 80px 0px;
+
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+
+	width: 90%;
+	max-width: 1192px;
+	margin: 0 auto;
+
+	display: flex;
+	gap: 120px;
+	flex-direction: column;
+}
+
+.inside .bg_shadow1 {
+	position: absolute;
+
+	right: -700px;
+	bottom: -400px;
+
+	width: 955px;
+	height: auto;
+
+	transform: rotate(60deg);
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.inside .top {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 32px;
+}
+
+.inside .top .left {
+	position: relative;
+
+	width: 100%;
+	max-width: 530px;
+
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.inside .sectionName {
+	position: relative;
+
+	padding: 6px 16px;
+
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	border-radius: 55px;
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px #565656;
+	backdrop-filter: blur(7.5px);
+}
+
+.inside .sectionName p {
+	position: relative;
+
+	color: $color-white;
+	text-align: center;
+	font-feature-settings: 'liga' off, 'calt' off;
+	font-family: $font-main;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 145%;
+	letter-spacing: -0.14px;
+}
+
+.inside .sectionName img {
+	position: relative;
+
+	width: 24px;
+	height: auto;
+}
+
+.inside .sectionName::before {
+	position: absolute;
+	content: '';
+
+	left: -2px;
+	top: -2px;
+
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.2);
+}
+
+.inside .sectionName::after {
+	position: absolute;
+	content: '';
+
+	left: -1px;
+	top: -1px;
+
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.1);
+}
+
+.inside .top .left .title {
+	position: relative;
+}
+
+.inside .top .left .desc {
+	position: relative;
+
+	width: 100%;
+
+	color: rgba($color-white, 0.7);
+}
+
+.inside .top .left .buttons {
+	position: relative;
+}
+
+.inside .top .right {
+	position: relative;
+
+	width: auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.inside .top .right .rightTop {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.inside .top .right .rightTop .supplyTitle {
+	position: relative;
+}
+
+.inside .coloredBox {
+	position: relative;
+
+	padding: 6px 12px;
+
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	border-radius: 55px;
+
+	backdrop-filter: blur(7.5px);
+}
+
+.inside .coloredBox .dot {
+	position: relative;
+
+	width: 10px;
+	min-width: 10px;
+	height: 10px;
+
+	border-radius: 100%;
+}
+
+.inside .coloredBox p {
+	position: relative;
+
+	color: $color-white;
+	text-align: center;
+	font-feature-settings: 'liga' off, 'calt' off;
+	font-family: $font-main;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: -0.14px;
+
+	text-wrap: nowrap;
+}
+
+.inside .coloredBox::before {
+	position: absolute;
+	content: '';
+
+	left: -2px;
+	top: -2px;
+
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.2);
+}
+
+.inside .coloredBox::after {
+	position: absolute;
+	content: '';
+
+	left: -1px;
+	top: -1px;
+
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.1);
+}
+
+.inside .coloredBox[data-color='green'] {
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba($color-green, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px $color-green;
+	backdrop-filter: blur(7.5px);
+
+	.dot {
+		background: $color-green;
+		border: 2px solid $color-green-2;
+	}
+
+	::before {
+		border: 1px solid rgba($color-green, 0.2);
+	}
+
+	::after {
+		border: 1px solid rgba($color-green, 0.1);
+	}
+}
+
+.inside .coloredBox[data-color='green']::after {
+	border: 1px solid rgba($color-green, 0.1);
+}
+
+.inside .coloredBox[data-color='green']::before {
+	border: 1px solid rgba($color-green, 0.2);
+}
+
+.inside .coloredBox[data-color='orange'] {
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba($color-primary, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px $color-primary;
+	backdrop-filter: blur(7.5px);
+
+	.dot {
+		background: $color-primary;
+		border: 2px solid $color-primary-2;
+	}
+
+	::before {
+		border: 1px solid rgba($color-primary, 0.2);
+	}
+
+	::after {
+		border: 1px solid rgba($color-primary, 0.1);
+	}
+}
+
+.inside .coloredBox[data-color='orange']::after {
+	border: 1px solid rgba($color-primary, 0.1);
+}
+
+.inside .coloredBox[data-color='orange']::before {
+	border: 1px solid rgba($color-primary, 0.2);
+}
+
+.inside .top .right .supplyAmount {
+	position: relative;
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.inside .bottom {
+	position: relative;
+
+	width: 100%;
+}
+
+.inside .bottom .amounts {
+	position: relative;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	gap: calc(100% - 305px - 305px);
+	row-gap: 160px;
+
+	z-index: 3;
+}
+
+.inside .bottom .amounts .oneAmount {
+	position: relative;
+
+	width: 305px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.inside .bottom .amounts .oneAmount .top {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	justify-content: flex-start;
+	gap: 14px;
+	align-items: center;
+}
+
+.inside .bottom .amounts .oneAmount .top .line {
+	position: relative;
+
+	width: 1px;
+	min-width: 1px;
+	height: 14px;
+}
+
+.inside .bottom .amounts .oneAmount .top .amountTitle {
+	position: relative;
+
+	color: $color-white;
+	font-family: $font-main;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 105%;
+}
+
+.inside .bottom .amounts .oneAmount .amountDesc {
+	position: relative;
+
+	color: rgba($color-white, 0.7);
+}
+
+.inside .bottom .circles {
+	position: absolute;
+
+	left: 50%;
+	top: 50%;
+
+	translate: -50% -50%;
+
+	width: 446px;
+	height: 446px;
+
+	z-index: 2;
+}
+
+.inside .bottom .circles .oneCircle {
+	position: absolute;
+
+	width: 100%;
+	height: auto;
+
+	scale: 1;
+	transition: scale $animation1;
+}
+
+.inside .bottom .circles .oneCircle[data-hovered='true'] {
+	scale: 1.1;
+}
+
+.inside .bottom .circles .symbol {
+	position: absolute;
+
+	left: 50%;
+	top: 50%;
+
+	translate: -50% -50%;
+
+	width: 64px;
+	height: auto;
+
+	filter: $color-white-filter;
+}
+
+// RWD
+@media (max-width: 1200px) {
+	.section .inside {
+		gap: 48px;
+		justify-content: center;
+	}
+
+	.inside .bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	.inside .bottom .amounts {
+		gap: 24px;
+	}
+
+	.inside .bottom .amounts .oneAmount {
+		width: 100%;
+		gap: 16px;
+	}
+
+	.inside .bottom .amounts .oneAmount .top {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.inside .bottom .amounts .oneAmount .top .line {
+		order: 2;
+
+		width: 14px;
+		height: 1px;
+	}
+
+	.inside .bottom .amounts .oneAmount .top .amountTitle {
+		order: 1;
+	}
+
+	.inside .bottom .amounts .oneAmount .amountDesc {
+		width: 100%;
+		text-align: center;
+		max-width: 530px;
+		margin: 0 auto;
+	}
+
+	.inside .bottom .circles {
+		position: relative;
+
+		left: auto;
+		top: auto;
+		translate: none;
+
+		margin: 0 auto;
+	}
+
+	.inside .top {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.inside .top .left {
+		justify-content: center;
+	}
+
+	.inside .sectionName {
+		margin: 0 auto;
+	}
+
+	.inside .top .left .title {
+		width: 100%;
+		text-align: center;
+	}
+
+	.inside .top .left .desc {
+		width: 100%;
+		text-align: center;
+	}
+
+	.inside .top .left .buttons {
+		margin: 0 auto;
+	}
+
+	.inside .top .right {
+		gap: 16px;
+	}
+
+	.inside .top .right .rightTop {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.inside .top .right .rightTop .supplyTitle {
+		order: 2;
+	}
+
+	.inside .coloredBox {
+		order: 1;
+	}
+}
+
+@media (max-width: 900px) {
+	.section {
+		padding: 40px 0px;
+	}
+}
+
+@media (max-width: 600px) {
+	.inside .bottom .circles {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 450px) {
+	.inside .bottom .circles {
+		width: 350px;
+		height: 350px;
+	}
+}

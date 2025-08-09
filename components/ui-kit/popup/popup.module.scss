@@ -1,0 +1,29 @@
+@use '@/styles/variables.scss' as *;
+
+.bg {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100dvh;
+
+	background: rgba($color-black, 0.95);
+	backdrop-filter: blur(5px);
+
+	overflow: hidden;
+
+	z-index: 15;
+
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity $animation1, width $animation2;
+}
+
+.bg[data-visible='true'] {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+// RWD \/ \/ \/
+@media (max-width: 1150px) {
+}

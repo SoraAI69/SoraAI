@@ -1,0 +1,169 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+	width: 100%;
+
+	padding: 80px 0px;
+
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+
+	width: 90%;
+	max-width: 1192px;
+	margin: 0 auto;
+
+	display: flex;
+	gap: 64px;
+	flex-direction: column;
+}
+
+.inside .bg_shadow1 {
+	position: absolute;
+
+	left: -750px;
+	top: -600px;
+
+	width: 955px;
+	height: auto;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.inside .bg_shadow2 {
+	position: absolute;
+
+	right: -750px;
+	bottom: -650px;
+
+	width: 955px;
+	height: auto;
+
+	transform: rotate(90deg);
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.inside .top {
+	position: relative;
+
+	width: 100%;
+	max-width: 660px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+}
+
+.inside .top .sectionName {
+	position: relative;
+
+	padding: 6px 16px;
+
+	margin: 0 auto;
+
+	border-radius: 55px;
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px #565656;
+	backdrop-filter: blur(7.5px);
+}
+
+.inside .top .sectionName p {
+	position: relative;
+
+	color: $color-white;
+	text-align: center;
+	font-feature-settings: 'liga' off, 'calt' off;
+	font-family: $font-main;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 145%;
+	letter-spacing: -0.14px;
+}
+
+.inside .top .sectionName img {
+	position: relative;
+
+	width: 24px;
+	height: auto;
+}
+
+.inside .top .sectionName::before {
+	position: absolute;
+	content: '';
+
+	left: -2px;
+	top: -2px;
+
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.2);
+}
+
+.inside .top .sectionName::after {
+	position: absolute;
+	content: '';
+
+	left: -1px;
+	top: -1px;
+
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.1);
+}
+
+.inside .top .title {
+	position: relative;
+
+	width: 100%;
+	text-align: center;
+
+	color: $color-white;
+}
+
+.inside .points {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+
+// RWD
+@media (max-width: 1150px) {
+	.section .inside {
+		gap: 48px;
+	}
+
+	.inside .points {
+		gap: 16px;
+	}
+}
+
+@media (max-width: 900px) {
+	.section {
+		padding: 40px 0px;
+	}
+}

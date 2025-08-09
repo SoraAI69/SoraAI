@@ -1,0 +1,53 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+	width: 100%;
+
+	border-bottom: 1px solid $color-black-2;
+
+	height: 121px;
+
+	z-index: 5;
+}
+
+.section .inside {
+	position: relative;
+	width: 100%;
+	max-width: 2500px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.inside img {
+	position: relative;
+
+	margin: 0px 24px;
+}
+
+.inside .line {
+	position: relative;
+
+	width: 1px;
+	min-width: 1px;
+	height: 48px;
+
+	background: linear-gradient(
+		0deg,
+		transparent 0%,
+		$color-black-2 50%,
+		transparent 100%
+	);
+}
+
+// RWD
+@media (max-width: 650px) {
+	.section {
+		height: 80px;
+	}
+
+	.inside img {
+		padding: 0 16px;
+		margin: 0px 16px;
+	}
+}

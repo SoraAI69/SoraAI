@@ -1,0 +1,163 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+
+	width: 100%;
+
+	background: $color-classic-black;
+
+	padding-top: 48px;
+	padding-bottom: 24px;
+
+	z-index: 5;
+}
+
+.section .inside {
+	position: relative;
+
+	width: 90%;
+	max-width: 1192px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.inside .top {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inside .top .left {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.inside .top .left .logo {
+	position: relative;
+
+	width: 114px;
+	height: auto;
+}
+
+.inside .top .left .logo:hover {
+	cursor: pointer;
+}
+
+.inside .top .left .leftDesc {
+	position: relative;
+
+	max-width: 320px;
+
+	color: rgba($color-white, 0.6);
+	font-family: $font-main;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+}
+
+.inside .top .left .socials {
+	position: relative;
+
+	display: flex;
+	gap: 12px;
+}
+
+.inside .top .right {
+	position: relative;
+
+	padding-bottom: 29px;
+	border-bottom: 1px solid $color-black-2;
+
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.inside .line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	background: $color-black-2;
+}
+
+.inside .bottom {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.inside .bottom .bottomDesc {
+	position: relative;
+
+	color: rgba($color-white, 0.6);
+	font-family: $font-main;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 125%;
+}
+
+.inside .bottom .buttons {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+// RWD
+@media (max-width: 950px) {
+	.inside .top {
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.inside .top .left {
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.inside .top .left .leftDesc {
+		width: 100%;
+		max-width: 530px;
+		text-align: center;
+	}
+
+	.inside .top .right {
+		display: none;
+	}
+}
+
+@media (max-width: 900px) {
+	.inside .bottom {
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.inside .bottom .bottomDesc {
+		text-align: center;
+	}
+}

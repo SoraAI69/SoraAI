@@ -1,0 +1,440 @@
+@use '@/styles/variables.scss' as *;
+
+.section {
+	position: relative;
+	width: 100%;
+
+	padding: 80px 0px;
+
+	z-index: 4;
+}
+
+.section .inside {
+	position: relative;
+
+	width: 90%;
+	max-width: 1192px;
+	margin: 0 auto;
+
+	display: flex;
+	gap: 64px;
+	flex-direction: column;
+}
+
+.inside .bg_shadow1 {
+	position: absolute;
+
+	left: -700px;
+	top: -500px;
+
+	width: 955px;
+	height: auto;
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.inside .bg_shadow2 {
+	position: absolute;
+
+	right: -750px;
+	bottom: -650px;
+
+	width: 955px;
+	height: auto;
+
+	transform: rotate(90deg);
+
+	z-index: -1;
+	pointer-events: none;
+}
+
+.inside .top {
+	position: relative;
+
+	width: 100%;
+	max-width: 530px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+}
+
+.inside .top .sectionName {
+	position: relative;
+
+	padding: 6px 16px;
+
+	margin: 0 auto;
+
+	border-radius: 55px;
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px #565656;
+	backdrop-filter: blur(7.5px);
+}
+
+.inside .top .sectionName p {
+	position: relative;
+
+	color: $color-white;
+	text-align: center;
+	font-feature-settings: 'liga' off, 'calt' off;
+	font-family: $font-main;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 145%;
+	letter-spacing: -0.14px;
+}
+
+.inside .top .sectionName img {
+	position: relative;
+
+	width: 24px;
+	height: auto;
+}
+
+.inside .top .sectionName::before {
+	position: absolute;
+	content: '';
+
+	left: -2px;
+	top: -2px;
+
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.2);
+}
+
+.inside .top .sectionName::after {
+	position: absolute;
+	content: '';
+
+	left: -1px;
+	top: -1px;
+
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.1);
+}
+
+.inside .top .title {
+	position: relative;
+
+	width: 100%;
+	text-align: center;
+
+	color: $color-white;
+}
+
+.inside .top .desc {
+	position: relative;
+
+	width: 100%;
+	text-align: center;
+
+	color: rgba($color-white, 0.7);
+}
+
+.inside .bottom {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	gap: 24px;
+}
+
+.inside .bottom .onePoint {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	padding: 24px;
+
+	border-radius: 24px;
+	backdrop-filter: blur(5px);
+}
+
+.inside .bottom .onePoint[data-status='Done'] {
+	border: 1px solid rgba($color-green, 0.1);
+}
+
+.inside .bottom .onePoint[data-status='In Progress'] {
+	border: 1px solid rgba($color-primary, 0.1);
+}
+
+.inside .bottom .onePoint .pointTop {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inside .bottom .onePoint .pointTop .pointTitle {
+	position: relative;
+
+	color: $color-white;
+}
+
+.inside .coloredBox {
+	position: relative;
+
+	padding: 6px 12px;
+
+	display: flex;
+	align-items: center;
+	gap: 6px;
+
+	border-radius: 55px;
+
+	backdrop-filter: blur(7.5px);
+}
+
+.inside .coloredBox .dot {
+	position: relative;
+
+	width: 10px;
+	min-width: 10px;
+	height: 10px;
+
+	border-radius: 100%;
+}
+
+.inside .coloredBox p {
+	position: relative;
+
+	color: $color-white;
+	text-align: center;
+	font-feature-settings: 'liga' off, 'calt' off;
+	font-family: $font-main;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: -0.14px;
+
+	text-wrap: nowrap;
+}
+
+.inside .coloredBox::before {
+	position: absolute;
+	content: '';
+
+	left: -2px;
+	top: -2px;
+
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.2);
+}
+
+.inside .coloredBox::after {
+	position: absolute;
+	content: '';
+
+	left: -1px;
+	top: -1px;
+
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	background: none;
+
+	border-radius: 55px;
+	border: 1px solid rgba($color-white, 0.1);
+}
+
+.inside .coloredBox[data-color='green'] {
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba($color-green, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px $color-green;
+	backdrop-filter: blur(7.5px);
+
+	.dot {
+		background: $color-green;
+		border: 2px solid $color-green-2;
+	}
+
+	::before {
+		border: 1px solid rgba($color-green, 0.2);
+	}
+
+	::after {
+		border: 1px solid rgba($color-green, 0.1);
+	}
+}
+
+.inside .coloredBox[data-color='green']::after {
+	border: 1px solid rgba($color-green, 0.1);
+}
+
+.inside .coloredBox[data-color='green']::before {
+	border: 1px solid rgba($color-green, 0.2);
+}
+
+.inside .coloredBox[data-color='orange'] {
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba($color-primary, 0.1);
+	box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35), 0 0 0 1px $color-primary;
+	backdrop-filter: blur(7.5px);
+
+	.dot {
+		background: $color-primary;
+		border: 2px solid $color-primary-2;
+	}
+
+	::before {
+		border: 1px solid rgba($color-primary, 0.2);
+	}
+
+	::after {
+		border: 1px solid rgba($color-primary, 0.1);
+	}
+}
+
+.inside .coloredBox[data-color='orange']::after {
+	border: 1px solid rgba($color-primary, 0.1);
+}
+
+.inside .coloredBox[data-color='orange']::before {
+	border: 1px solid rgba($color-primary, 0.2);
+}
+
+.inside .bottom .onePoint .line {
+	position: relative;
+
+	width: 100%;
+	height: 1px;
+
+	background: $color-black-2;
+}
+
+.inside .bottom .onePoint .phasePoints {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.inside .bottom .onePoint .phasePoints .phasePoint {
+	position: relative;
+
+	width: 100%;
+
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.inside .bottom .onePoint .phasePoints .phasePoint .phasePointImg {
+	position: relative;
+
+	width: 28px;
+	min-width: 28px;
+	height: 28px;
+
+	border-radius: 100%;
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.12) 0%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.5px);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		position: relative;
+
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.inside .bottom .onePoint .phasePoints .phasePoint[data-status='Done'] {
+	.phasePointImg {
+		border: 1px solid $color-green;
+		box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35),
+			0 0 0 1px $color-green;
+
+		img {
+			filter: $color-green-filter;
+		}
+	}
+}
+
+.inside .bottom .onePoint .phasePoints .phasePoint[data-status='In Progress'] {
+	.phasePointImg {
+		border: 1px solid $color-primary;
+		box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.35),
+			0 0 0 1px $color-primary;
+
+		img {
+			filter: $color-primary-filter;
+		}
+	}
+
+	.phasePointTitle {
+		color: rgba($color-white, 0.7);
+	}
+}
+
+.inside .bottom .onePoint .phasePoints .phasePoint .phasePointTitle {
+	position: relative;
+
+	color: $color-white;
+}
+
+// RWD
+@media (max-width: 1150px) {
+	.inside .bottom {
+		flex-wrap: wrap;
+	}
+
+	.section .inside {
+		gap: 48px;
+	}
+}
+
+@media (max-width: 900px) {
+	.section {
+		padding: 40px 0px;
+	}
+}
