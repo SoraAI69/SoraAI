@@ -44,7 +44,7 @@ export default function Join(props) {
 						text={'Telegram'}
 						leftIcon={telegram}
 						rightIcon={arrow_short_right}
-						href="https://google.com"
+						href="https://t.me/+iAFCus_AC4o5YmY1"
 						target="_blank"
 					/>
 					<Button
@@ -61,3 +61,4 @@ export default function Join(props) {
 		</div>
 	);
 }
+
