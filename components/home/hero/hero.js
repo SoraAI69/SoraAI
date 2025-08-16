@@ -47,7 +47,7 @@ export default function Hero(props) {
 						size={'m'}
 						text={'Start Trading'}
 						rightIcon={arrow_short_right}
-						href="https://google.com"
+						href="https://t.me/soraaiapp_bot"
 						target="_blank"
 					/>
 					<Button
@@ -84,4 +84,5 @@ export default function Hero(props) {
 		</div>
 	);
 }
+
 
