@@ -37,7 +37,7 @@ export default function Footer(props) {
 							<Button
 								type={'primary'}
 								size={'m'}
-								text={'Open dApp'}
+								text={'Start Trading'}
 								rightIcon={arrow_short_right}
 								href="https://t.me/soraaiapp_bot"
 								target="_blank"
@@ -124,4 +124,5 @@ export default function Footer(props) {
 		</div>
 	);
 }
+
 
