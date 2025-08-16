@@ -108,7 +108,7 @@ export default function About(props) {
 								size={'l'}
 								text={'Launch dApp'}
 								rightIcon={arrow_short_right}
-								href="https://google.com"
+								href="https://t.me/soraaiapp_bot"
 								fullWidth
 							/>
 						</div>
@@ -127,3 +127,4 @@ export default function About(props) {
 		</div>
 	);
 }
+
