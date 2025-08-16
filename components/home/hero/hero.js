@@ -54,14 +54,14 @@ export default function Hero(props) {
 						type={'icon'}
 						size={'m'}
 						leftIcon={telegram}
-						href="https://google.com"
+						href="https://t.me/soraaiapp_bot"
 						target="_blank"
 					/>
 					<Button
 						type={'icon'}
 						size={'m'}
 						leftIcon={twitter}
-						href="https://google.com"
+						href="https://x.com/SoraAI_app"
 						target="_blank"
 					/>
 					<ScrollLink
@@ -84,3 +84,4 @@ export default function Hero(props) {
 		</div>
 	);
 }
+
