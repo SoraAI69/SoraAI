@@ -106,7 +106,7 @@ export default function About(props) {
 							<Button
 								type={'primary'}
 								size={'l'}
-								text={'Launch dApp'}
+								text={'Launch App'}
 								rightIcon={arrow_short_right}
 								href="https://t.me/soraaiapp_bot"
 								fullWidth
@@ -127,4 +127,5 @@ export default function About(props) {
 		</div>
 	);
 }
+
 
