@@ -39,21 +39,21 @@ export default function Footer(props) {
 								size={'m'}
 								text={'Open dApp'}
 								rightIcon={arrow_short_right}
-								href="https://google.com"
+								href="https://t.me/soraaiapp_bot"
 								target="_blank"
 							/>
 							<Button
 								type={'icon'}
 								size={'m'}
 								leftIcon={telegram}
-								href="https://google.com"
+								href="https://t.me/+iAFCus_AC4o5YmY1"
 								target="_blank"
 							/>
 							<Button
 								type={'icon'}
 								size={'m'}
 								leftIcon={twitter}
-								href="https://google.com"
+								href="https://x.com/SoraAI_app"
 								target="_blank"
 							/>
 						</div>
@@ -124,3 +124,4 @@ export default function Footer(props) {
 		</div>
 	);
 }
+
