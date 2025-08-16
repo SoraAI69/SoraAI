@@ -53,7 +53,7 @@ export default function Join(props) {
 						text={'Twitter [X]'}
 						leftIcon={twitter}
 						rightIcon={arrow_short_right}
-						href="https://google.com"
+						href="https://x.com/SoraAI_app"
 						target="_blank"
 					/>
 				</div>
@@ -61,4 +61,5 @@ export default function Join(props) {
 		</div>
 	);
 }
+
 
