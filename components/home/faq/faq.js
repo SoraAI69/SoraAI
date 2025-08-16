@@ -14,23 +14,23 @@ import { Typography } from '@/components/ui-kit/typography/typography';
 const list = [
 	{
 		title: 'What is Sora AI Companion Grok?',
-		desc: 'FILLER Join via Telegram, set up your Solana wallet, and launch the dApp to begin exploring and trading with Sora AI Companion Grok.',
+		desc: 'It’s an AI-driven Telegram bot that helps you discover and trade emerging utility projects on the Solana blockchain with ease.',
 	},
 	{
 		title: 'How does it identify new projects?',
-		desc: 'FILLER Join via Telegram, set up your Solana wallet, and launch the dApp to begin exploring and trading with Sora AI Companion Grok.',
+		desc: 'The bot uses advanced AI algorithms to scan the Solana blockchain in real-time, detecting promising utility projects based on market trends and data.',
 	},
 	{
 		title: 'Is my wallet secure with the bot?',
-		desc: 'FILLER Join via Telegram, set up your Solana wallet, and launch the dApp to begin exploring and trading with Sora AI Companion Grok.',
+		desc: 'Yes, Sora AI Companion Grok includes robust security measures to protect your assets, with regular updates to enhance safety.',
 	},
 	{
 		title: 'Can I control when the bot trades?',
-		desc: 'FILLER Join via Telegram, set up your Solana wallet, and launch the dApp to begin exploring and trading with Sora AI Companion Grok.',
+		desc: 'Absolutely, you can start, stop, or adjust the bot’s trading activity anytime using simple Telegram commands.',
 	},
 	{
 		title: 'Do I need technical knowledge to use it?',
-		desc: 'FILLER Join via Telegram, set up your Solana wallet, and launch the dApp to begin exploring and trading with Sora AI Companion Grok.',
+		desc: 'No, the bot is designed to be user-friendly, requiring no advanced technical skills—just connect your wallet and start trading.',
 	},
 	{
 		title: 'How do I get started with the bot?',
@@ -81,3 +81,4 @@ export default function Faq(props) {
 		</div>
 	);
 }
+
